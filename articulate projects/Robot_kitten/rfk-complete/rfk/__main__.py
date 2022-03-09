@@ -24,7 +24,7 @@ ROWS = 40
 CAPTION = "Robot Finds Kitten"
 DATA_PATH = os.path.dirname(os.path.abspath(__file__)) + "/data/messages.txt"
 WHITE = Color(255, 255, 255)
-DEFAULT_ARTIFACTS = 5
+DEFAULT_ARTIFACTS = 3
 
 
 def main():
