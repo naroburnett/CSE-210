@@ -1,7 +1,9 @@
 import pygame
-from constants.utils import *
+import math
+from constants import *
 
-class vehical:
+
+class Vehicle:
     def __init__(self, max_vel, rotation_vel):
         self.img = self.IMG
         self.max_vel = max_vel

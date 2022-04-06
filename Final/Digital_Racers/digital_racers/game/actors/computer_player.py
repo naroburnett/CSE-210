@@ -1,7 +1,9 @@
 import pygame
 import math
+from game.actors.vehicle import Vehicle
+from constants import *
 
-class Computer_Player(Player):
+class Computer_Player(Vehicle):
     IMG = GREEN_CAR
     START_POS = (150, 200)
 

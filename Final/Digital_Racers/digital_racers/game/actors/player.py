@@ -1,9 +1,13 @@
-from constants 
+from game.actors.vehicle import Vehicle
+from constants import *
 
-class Player(vehicle):
+class Player(Vehicle):
     IMG = RED_CAR
     START_POS = (180, 200)
 
+    def __init__(self, max_vel, rotation_vel):
+        super().__init__(max_vel, rotation_vel)
+        
     def reduce_speed(self):
         self.vel = max(self.vel - self.acceleration / 2, 0)
         self.move()
