@@ -2,8 +2,6 @@ from game.actors.vehicle import Vehicle
 from constants import *
 
 class Player(Vehicle):
-    IMG = RED_CAR
-    START_POS = (180, 200)
 
     def __init__(self, max_vel, rotation_vel):
         super().__init__(max_vel, rotation_vel)
