@@ -4,14 +4,18 @@ from game.actors.vehicle import Vehicle
 from constants import *
 
 class Computer_Player(Vehicle):
-    IMG = GREEN_CAR
-    START_POS = (150, 200)
 
-    def __init__(self, max_vel, rotation_vel, path=[]):
+    def __init__(self, max_vel, rotation_vel):
         super().__init__(max_vel, rotation_vel)
-        self.path = path
+        self.path = []
         self.current_point = 0
         self.vel = max_vel
+    
+    def set_path(self, path):
+        self.path = path
+    
+    def get_path(self):
+        return self.path
 
     def draw_points(self, win):
         for point in self.path:
@@ -46,7 +50,7 @@ class Computer_Player(Vehicle):
     def update_path_point(self):
         target = self.path[self.current_point]
         rect = pygame.Rect(
-            self.x, self.y, self.img.get_width(), self.img.get_height())
+            self.x, self.y, self.vehicle.get_width(), self.vehicle.get_height())
         if rect.collidepoint(*target):
             self.current_point += 1
 
